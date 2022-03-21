@@ -18,9 +18,15 @@ export const AddTask = ({
   return (
     <>
       <form onSubmit={handleSubmitTask}>
-        <input type="text" name="task" value={task} onChange={handleChange} />
+        <input
+          type="text"
+          name="task"
+          value={task}
+          onChange={handleChange}
+          className="addTask"
+        />
         <button type="submit" aria-label="Add task">
-          <PlusIcon />
+          <PlusIcon className="plusIcon" />
         </button>
       </form>
     </>

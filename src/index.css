@@ -2,6 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+.divOne {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  background-color: grey;
+}
+
+.taskText {
+  margin-left: 10px;
+  font-size: large;
+}
+
+.divTwo {
+  display: flex;
+  width: 16.666667%;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2px;
+}
+
 .box {
-  margin-left: 50px;
+  position: relative;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.box.box::checked {
+  background-color: green;
+}
+
+.addTask {
+  margin-top: 80px;
+}
+
+.plusIcon {
+  position: relative;
+  left: 20px;
+  top: 10px;
+}
+
+.deleteButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 0.25rem;
+  position: relative;
+  right: 10px;
+}
+
+.deleteButton:hover {
+  background-color: rgba(182, 6, 6, 0.575);
 }

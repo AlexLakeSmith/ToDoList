@@ -19,11 +19,15 @@ export const Row = ({
 }: TodoProps) => {
   return (
     <>
-      <div>
-        <p>{task}</p>
-        <div>
-          <button aria-label="Delete a task" onClick={() => handleDelete(id)}>
-            Delete
+      <div className="divOne">
+        <p className="taskText">{task}</p>
+        <div className="divTwo">
+          <button
+            aria-label="Delete a task"
+            className="deleteButton"
+            onClick={() => handleDelete(id)}
+          >
+            X
           </button>
           <input
             type="checkbox"

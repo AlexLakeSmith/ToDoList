@@ -15,6 +15,7 @@ export const Todos = () => {
   const [todos, setTodos] = useState<Todo[]>(data);
   // UseState hook for adding a new task.
   const [task, setTask] = useState("");
+
   // TasksLength: How many tasks left
   const tasksLength = todos.length;
   // HasTasks: Are there any tasks left?
@@ -64,6 +65,16 @@ export const Todos = () => {
     setTodos(updatedTasks);
   };
 
+  const RemainingMessage = () => {
+    let outcome = "";
+    if (!hasTasks) {
+      outcome = "0 Tasks Remaining";
+    } else {
+      outcome = "Still tasks to complete";
+    }
+    return <>outcome</>;
+  };
+
   return (
     <section>
       {todos.map((todo) => (
@@ -79,7 +90,6 @@ export const Todos = () => {
         handleChange={handleChange}
         handleSubmitTask={handleSubmitTask}
       />
-      if(!remainingTasks){<p>Please add a task!</p>}
     </section>
   );
 };
